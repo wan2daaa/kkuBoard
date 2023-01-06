@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<th:block th:replace="_inc/title.html :: title"></th:block>
+</head>
+<body>
+
+
+<div class="login center">
+	<div class="input_box">
+		<p>
+			<input type="text" placeholder="Email">
+			<input type="password" placeholder="비밀번호">
+		</p>
+	</div>
+	<input type="checkbox" id="save"><label for="save">이메일 저장</label>
+
+	<p class="btn"><a href="/board">로그인</a></p>
+	<p class="bottom">
+		<a href="/login/self_certification">비밀번호 찾기</a>
+		<a href="/login/join01">회원가입</a>
+	</p>
+</div><!-- login END -->
+
+<p class="login_ask"><span>문의</span>gyeongtae_kim4071@naver.com</p>
+
+
+</body>
+</html>
