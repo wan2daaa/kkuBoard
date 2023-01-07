@@ -8,6 +8,8 @@
 #### db =  mysql
 - src/resources/application,properties 에서 username, password 설정 
 - db 는 board.sql로 가져오기
+  - 회원테이블 구현 아직 안되어있어서 따로 추가필요
+  - 외래키도 연결 안해놓았음
   - cli -> board.sql 디렉토리에서 
   - mysql -u 아이디 -p /board.sql + Enter
   - 비밀번호 입력 + 엔터
