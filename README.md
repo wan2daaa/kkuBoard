@@ -18,6 +18,6 @@
 
 ### jdk
 - jdk 17 로 설정 되어있는데 8 이나 11 쓰고 싶으면, 
-  - build.gradel 에서 sourceCompatibility = '쓰고싶은 jdk 버전' 변경하고 
-  - intellij 기준 project structure 에서 sdk language level 쓰고싶은 jdk 버전으로 변경
+  - build.gradle 에서 sourceCompatibility = '쓰고싶은 jdk 버전' 변경하고 
+  - intellij 기준 project structure 에서 sdk language,level 쓰고싶은 jdk 버전으로 변경
 
