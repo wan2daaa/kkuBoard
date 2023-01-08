@@ -17,10 +17,11 @@
 			<div class="navi">
 				<div class="top_navi"><a href="/board"><img src="/_img/cont/navi_arrow.png"></a><h2>게시물 작성</h2></div>
 			</div>
+			<form method="post" action="/board/write" >
 			<div class="bbs_write w_box top no_line">
 				<p class="path mb10">자유게시판</p>
-				<input type="text" placeholder="게시물 제목 입력" class="mb10"/>
-				<textarea rows="10" placeholder="게시물 내용 입력"></textarea>
+				<input type="text" name="boardTitle" placeholder="게시물 제목 입력" class="mb10"/>
+				<textarea rows="10" name="boardContents" placeholder="게시물 내용 입력"></textarea>
 				<div class="add_photo">
 					<a href="#none" class="add">
 						<span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M194.6 32H317.4C338.1 32 356.4 45.22 362.9 64.82L373.3 96H448C483.3 96 512 124.7 512 160V416C512 451.3 483.3 480 448 480H64C28.65 480 0 451.3 0 416V160C0 124.7 28.65 96 64 96H138.7L149.1 64.82C155.6 45.22 173.9 32 194.6 32H194.6zM256 384C309 384 352 341 352 288C352 234.1 309 192 256 192C202.1 192 160 234.1 160 288C160 341 202.1 384 256 384z"/></svg></span>
@@ -42,6 +43,8 @@
 
 				<th:block th:replace="_inc/bottom_menu.html :: bottom_menu"></th:block>
 			</div>
+				<input type="submit" style="display: none" id="submit">
+			</form>
 			<th:block th:replace="_inc/footer :: footer"></th:block>
 			</div>
 	<!-- CONTENTS END -->
@@ -54,7 +57,7 @@
 			<div class="pop_cont text">
 				<p class="tit c">게시물 작성 완료</p>
 				<p class="mb20 c">게시물이 등록되었습니다.</p>
-				<p class="btn"><a href="/board">확인</a></p>
+				<p class="btn"><a href="javascript:boardSubmit();">확인</a></p>
 			</div> 
 		</div>
 	</div>
@@ -62,8 +65,13 @@
 
 </div>
 <!-- //wrap -->
-
 </body>
+<script>
+	function boardSubmit() {
+		document.getElementById("submit").click();
+	}
+</script>
+
 </html>
 
 
