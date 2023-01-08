@@ -40,4 +40,7 @@ public class Board extends BaseEntity{
 
     private String boardContents;
 
+    public Board(Long boardIdx) {
+        this.boardIdx = boardIdx;
+    }
 }
