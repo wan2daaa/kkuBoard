@@ -1,11 +1,11 @@
-package wane.kkuboard.controller;
+package wane.kkuboard.controller.route;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/login")
-public class LoginController {
+public class LoginRouteController {
 
     @RequestMapping()
     public String login() {

@@ -1,5 +1,6 @@
 package wane.kkuboard.entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -17,9 +18,8 @@ public class Comment extends BaseEntity{
     @Id
     @GeneratedValue
     private Long comIdx;
-
-    @OneToOne
-    @JoinColumn(name = "board_idx")
+    
+    @OneToOne(mappedBy = "comment")
     private Board board;
 
     private String comContents;
